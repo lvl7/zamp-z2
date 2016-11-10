@@ -52,7 +52,7 @@ bool ReadFile(const char* sFileName, Scene& Scn)
    pParser->setErrorHandler(pHandler);
 
    try {
-     
+
      if (!pParser->loadGrammar("grammar/scene.xsd",
                               xercesc::Grammar::SchemaGrammarType,true)) {
        cerr << "!!! Plik grammar/scene.xsd, '" << endl
@@ -78,7 +78,7 @@ bool ReadFile(const char* sFileName, Scene& Scn)
                  << "    Plik:  " << sSystemId << endl
                  << "   Linia: " << Exception.getLineNumber() << endl
                  << " Kolumna: " << Exception.getColumnNumber() << endl
-                 << " Informacja: " << sMessage 
+                 << " Informacja: " << sMessage
                  << endl;
 
             XMLString::release(&sMessage);
@@ -98,7 +98,7 @@ bool ReadFile(const char* sFileName, Scene& Scn)
 
 
 
-int main (int argc, char* args[]) 
+int main (int argc, char* args[])
 {
    Scene  Scn;
 
